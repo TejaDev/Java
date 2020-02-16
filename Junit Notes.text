@@ -1,0 +1,18 @@
+@Test annotation should be used to specify 
+Unit test methods should always be public void
+we use assertEquals() to check whether two values match
+Two conditions should not be tested in the same block/method in the unit test file.
+underscores should be there in the method name. it supports the maintainability aspect of the webservice.
+assertTrue()
+assertFalse()
+@Before tag is executed before every @Test
+@After tag is execcuted after every @Test
+@BeforeClass is used at class level to overcome the redundant execution of the setup like methods
+any class that is annotated with @BeforeClass should be declared static
+@AfterClass is used at class level as well.
+assertArrayEquals() will compare the values.
+an object to object comparision would be performed for assertEquals. (which will only suffice the simple types)
+tesing exceptions in junit does have two variants/ways. one is a simple try catch block. a better way to do this is to use expected attribute in test tag.
+expected = NullPointerException.class
+performace can be tested using a timeout attribute in the test tag
+timeout = 100

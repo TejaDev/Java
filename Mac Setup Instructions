@@ -1,0 +1,59 @@
+Steps:
+1. Install Java
+2. Install Maven
+3. Install STS
+4. Install IDEA IntelliJ
+5. Install/Import JARS 
+
+Installing JAVA in Mac
+
+Version: 1.8
+Our obvious option would be to use Homebrew. But, for our understanding we would go with manual installation.
+https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+download jdkxx.dmg file
+install it and confirm if java is installed in the system preferences. 
+click on Java to double check if control panel is functioning 
+open terminal and check java Version
+use command java -Version (or) /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version
+Which java
+Enter echo $JAVA_HOME in Terminal
+if the Environment Variable is not Set locate your JDK (Version) in linux directories
+/Library/Java/JavaVirtualMachines/jdk_version/Contents/Home
+In order to set all the envisron variables the right way. we need to create/modify the .bash_profile file in user directory
+cd ~ and pwd to ensure your are in the user directory
+Add following commands to your path by modifying the 
+# Add Java
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home'
+export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$PATH:/usr/libexec/java_home
+export PATH=$JAVA_HOME/bin:$PATH
+
+Echo $JAVA_HOME and verify we were abble to pull the right path 
+
+
+
+
+
+Useful Resources:
+https://developer.apple.com/library/archive/qa/qa1067/_index.html
+
+
+
+
+
+
+
+
+
+
+
+
+# Add Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Add Maven
+export M2_HOME=/Applications/apache-maven-3.6.3
+export PATH=$PATH:$M2_HOME/bin
